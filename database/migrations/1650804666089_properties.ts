@@ -8,7 +8,7 @@ export default class Properties extends BaseSchema {
       table.increments('id')
 
       table.decimal('price', 19, 4)
-      table.decimal('fees', 19, 4)
+      table.decimal('fees', 19, 4).nullable()
       table.decimal('commission', 19, 4).nullable()
       table.decimal('deposit', 19, 4).nullable()
       table.integer('carpet_area')
