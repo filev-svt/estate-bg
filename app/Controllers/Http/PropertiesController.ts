@@ -8,6 +8,10 @@ export default class PropertiesController {
   }
 
   public async create(ctx: HttpContextContract) {
-    await ctx.request.validate(CreatePropertyValidator)
+    try {
+      ctx.response.send(Property.create(await ctx.request.validate(CreatePropertyValidator)))
+    } catch (e) {
+      ctx.response.badRequest(e.message)
+    }
   }
 }
