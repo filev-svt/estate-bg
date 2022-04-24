@@ -11,7 +11,7 @@ export default class PropertiesController {
     try {
       ctx.response.send(Property.create(await ctx.request.validate(CreatePropertyValidator)))
     } catch (e) {
-      ctx.response.badRequest(e.message)
+      ctx.response.badRequest(e.messages)
     }
   }
 }
