@@ -1,6 +1,5 @@
 import Factory from '@ioc:Adonis/Lucid/Factory'
 import Property from 'App/Models/Property'
-import { DateTime } from 'luxon'
 
 export const PropertyFactory = Factory.define(Property, ({ faker }) => {
   const carpetArea = faker.datatype.number({ min: 20, max: 150 })
@@ -22,6 +21,6 @@ export const PropertyFactory = Factory.define(Property, ({ faker }) => {
     hasGarage: faker.datatype.boolean(),
     hasElevator: faker.datatype.boolean(),
     hasFurniture: faker.datatype.boolean(),
-    freeAt: new DateTime(),
+    freeAt: null,
   }
 }).build()
