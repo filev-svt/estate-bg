@@ -25,6 +25,7 @@ Route.get('/', async () => {
 })
 
 Route.group(() => {
-  Route.get('', 'PropertiesController.index')
+  Route.get('', 'PropertiesController.list')
   Route.post('', 'PropertiesController.create')
+  Route.get(':id', 'PropertiesController.show')
 }).prefix('properties')
