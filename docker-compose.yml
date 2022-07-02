@@ -35,18 +35,18 @@ services:
       - postgres
       - redis
     build:
-      context: .
+      context: ./api
       target: dependencies
     ports:
-      - ${PORT}:${PORT}
+      - 3333:3333
       - 9229:9229
     env_file:
-      - .env
+      - ./api/.env
     environment:
       - PG_HOST=postgres
       - REDIS_HOST=redis
     volumes:
-      - ./:/home/node/app
+      - ./api/:/home/node/app
     command: dumb-init node ace serve --watch --node-args="--inspect=0.0.0.0"
 
 volumes:
