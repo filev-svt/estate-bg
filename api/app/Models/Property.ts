@@ -1,70 +1,70 @@
-import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { DateTime } from "luxon";
+import { BaseModel, column } from "@ioc:Adonis/Lucid/Orm";
 
 export default class Property extends BaseModel {
   @column({ isPrimary: true })
-  public id: number
+  public id: number;
 
   @column()
-  public price: number
+  public price: number;
 
   @column()
-  public fees: number | null
+  public fees: number | null;
 
   @column()
-  public commission: number | null
+  public commission: number | null;
 
   @column()
-  public deposit: number | null
+  public deposit: number | null;
 
   @column()
-  public carpetArea: number
+  public carpetArea: number;
 
   @column()
-  public builtUpArea: number
+  public builtUpArea: number;
 
   @column()
-  public floor: number | null
+  public floor: number | null;
 
   @column()
-  public city: string
+  public city: string;
 
   @column()
-  public street: string
+  public street: string;
 
   @column()
-  public houseNumber: string | null
+  public houseNumber: string | null;
 
   @column()
-  public postalCode: string | null
+  public postalCode: string | null;
 
   @column()
-  public latitude: string | null
+  public latitude: string | null;
 
   @column()
-  public longitude: string | null
+  public longitude: string | null;
 
   @column()
-  public description: string
+  public description: string;
 
   @column()
-  public hasParking: boolean
+  public hasParking: boolean;
 
   @column()
-  public hasGarage: boolean
+  public hasGarage: boolean;
 
   @column()
-  public hasElevator: boolean
+  public hasElevator: boolean;
 
   @column()
-  public hasFurniture: boolean
+  public hasFurniture: boolean;
 
   @column.date()
-  public freeAt: DateTime | null
+  public freeAt: DateTime | null;
 
   @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime
+  public createdAt: DateTime;
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime
+  public updatedAt: DateTime;
 }
