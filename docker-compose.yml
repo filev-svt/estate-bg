@@ -49,6 +49,17 @@ services:
       - ./api/:/home/node/app
     command: dumb-init node ace serve --watch --node-args="--inspect=0.0.0.0"
 
+  react-ui:
+    container_name: react-ui
+    build:
+      context: ./react-ui
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    volumes:
+       - ./react-ui:/app/react-ui
+
 volumes:
   postgres_volume:
   redis_volume:
