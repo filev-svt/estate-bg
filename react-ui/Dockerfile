@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-WORKDIR /react-ui
+WORKDIR /app/react-ui
 
 COPY ./package*.json ./
 
@@ -8,5 +8,5 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD npm start
 

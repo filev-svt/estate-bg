@@ -1,0 +1,11 @@
+node_modules
+build
+.vscode
+.env
+
+Dockerfile*
+docker-compose*
+.dockerignore
+*.md
+.git
+.gitignore
